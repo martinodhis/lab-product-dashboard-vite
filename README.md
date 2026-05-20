@@ -81,4 +81,4 @@ Built for the Lab Product Dashboard Vite project.
 i have added an image folder to show how the Product Dashboard  looks like
 
 
-![screenshot](./src/images/screenshot.png)
+![screenshot](./images/Screenshot.png)
