@@ -1,120 +1,84 @@
-# Lab: Product Dashboard Manager
+# Lab Product Dashboard
 
-## Introduction
+A modern React dashboard for displaying and managing product cards. This project is built with Vite, React, React Router, and Material UI, with a local mock backend served from `db.json` using `json-server`.
 
-Your company is developing an **e-commerce platform**, and you have been assigned to create a **Product Dashboard**. This dashboard will dynamically display a list of products, allow users to filter products by availability, and apply **conditional rendering** to display different UI states.
+## 🚀 Project Overview
 
-Your goal is to structure the React components, apply styles using **CSS Modules and Material UI**, and ensure that the dashboard passes all pre-written automated tests using **Jest and React Testing Library**.
+- React app scaffolded with Vite
+- Product dashboard UI with reusable card components
+- Mock API backend through `json-server`
+- ESLint support for code quality
+- Test setup using Vitest and React Testing Library
 
----
+## 📁 Key Files
 
-## **Challenge**
-1. Update Existing Element of the title
-2. Create New Elements for each product
+- `src/` — React source code
+- `src/components/` — UI components like `ProductCard` and `ProductList`
+- `db.json` — Mock dataset for local API responses
+- `package.json` — Scripts and dependencies
+- `vite.config.js` — Vite configuration
 
-## **Bonus Challenge**
-3. Delete Element
+## ✅ Prerequisites
 
----
+- Node.js 18+ installed
+- npm or Yarn installed
 
-## **Instructions**
+## 📦 Install Dependencies
 
-### **1️⃣ Fork and Clone the Repository**  
-1. Go to the provided **GitHub repository link**.
-2. **Fork** the repository to your GitHub account.
-3. **Clone** the forked repository to your local machine:
-   ```sh
-   git clone <your-forked-repository-url>
-   cd product-dashboard
-   ```
-4. Open the project in **VSCode**.
-5. Run the following command to install all necessary dependencies:
-   ```sh
-   npm install
-   ```
+From the project root:
 
-### **2️⃣ Update Existing Element**
-- Modify the existing **header** element to display the **Product Dashboard title**.
-- Select the **DOM element** with the ID of `header`.
-- Store it in a variable called `dashboardTitle`.
-- Change the **textContent** of `dashboardTitle` to **"Product Dashboard"**.
-
-### **3️⃣ Create New Elements for Each Product**
-- Loop through every product in the dataset.
-- Each product is stored in an **array**.
-- Inside the loop, create and configure the following **new elements**:
-  - **`div` element (`productContainer`)** to hold product details.
-  - **`h3` element (`productTitle`)** to display the product name.
-  - **`p` element (`productPrice`)** to show the product's price.
-  - **`p` element (`productAvailability`)** to indicate if the product is **in stock or out of stock**.
-  - **`img` element (`productImage`)** to display the product image.
-
-### **4️⃣ Append Elements to the DOM**
-- Select the element with the ID `product-list` and store it in a variable called `productList`.
-- Append `productTitle`, `productPrice`, `productAvailability`, and `productImage` to `productContainer`.
-- Append `productContainer` to `productList`.
-
-### **5️⃣ Implement Conditional Rendering**
-- Products that are **out of stock** should be **styled differently**.
-- Use **CSS Modules** to apply a different background color to out-of-stock items.
-
----
-
-## **Bonus Challenge: Delete Element**
-- Implement a feature that allows users to **remove a product** from the dashboard.
-- Add a **"Remove" button** next to each product.
-- When clicked, the button should **delete the product element** from the page.
-
----
-
-## **BONUS: Remove Elements from the DOM**
-
-We know how to add elements and change their attributes. What if we want to
-remove an element from a page?
-
-### `removeChild()`
-
-We use `removeChild()`, as you might guess, to remove a particular child of an
-element:
-
-```js
-someElement.removeChild(someChildElement);
+```bash
+npm install
 ```
 
-Let's take a look at a more complex example:
+Or with Yarn:
 
-```js
-const productList = document.getElementById("product-list");
-const firstProduct = productList.querySelector("div:first-child");
-productList.removeChild(firstProduct);
+```bash
+yarn install
 ```
 
-Here you can see the power of `querySelector()`: we can use it to find the
-first product in the list. We then pass that element as the argument to our
-`removeChild` method, which removes it from the dashboard.
+## 🔧 Run Locally
 
-What if we want to remove the entire product list?
+Start the React development server:
 
-### `element.remove()`
-
-We can just call `remove()` on the element itself:
-
-```js
-productList.remove();
+```bash
+npm run dev
 ```
 
-And it's gone!
+Open the address shown in the terminal, usually `http://localhost:5173`.
+
+## 🧪 Mock Backend
+
+Start the local JSON API server:
+
+```bash
+npm run server
+```
+
+The mock API will run at `http://localhost:4000`.
+
+## 🧩 Available Scripts
+
+- `npm run dev` — Start Vite dev server
+- `npm run build` — Build production assets
+- `npm run preview` — Preview production build locally
+- `npm run server` — Launch `json-server` on port 4000
+- `npm run lint` — Run ESLint
+- `npm run test` — Run tests with Vitest
+- `npm run test:watch` — Run tests in watch mode
+
+## 💡 Notes
+
+- Run `npm run server` before calling the mock API endpoints from the app.
+- Use `npm run preview` to verify the production build locally.
 
 ---
 
-## **Resources**
+Built for the Lab Product Dashboard Vite project.
 
-- [React Documentation](https://react.dev)
-- [CSS Modules Documentation](https://github.com/css-modules/css-modules)
-- [Material UI Documentation](https://mui.com)
-- [Jest Testing Framework](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com)
-- [document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
-- [append()](https://developer.mozilla.org/en-US/docs/Web/API/Element/append)
-- [removeChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild)
-- [element.remove()](https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove)
+
+# NOTE
+i have added an image folder to show how the Product Dashboard  looks like
+
+
+![screenshot](./src/images/screenshot.png)
